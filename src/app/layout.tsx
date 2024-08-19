@@ -1,8 +1,15 @@
 import type { Metadata } from "next";
+import localFont from 'next/font/local'
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const NunitoSans = localFont({
+  src: '../../public/assets/fonts/NunitoSans_7pt-Regular.ttf',
+  display: 'swap',
+  variable: '--font-regular',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={NunitoSans.variable}>
       <body className={inter.className}>{children}</body>
     </html>
   );
