@@ -9,7 +9,7 @@ export default function BreadCrumb({}: Props) {
         <ul>
             <li className="border-r border-gray-400 inline pr-2 dark:text-gray-400">
                 <a className="hover:text-gray-800" href="">
-                    Dashboard
+                    Admin
                 </a>
             </li>
             <li className="inline pl-2 dark:text-gray-400"></li>

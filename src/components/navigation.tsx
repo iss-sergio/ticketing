@@ -2,9 +2,12 @@
 
 import React, {useState} from 'react'
 import Image from 'next/image'
-import { BellRing, Gauge } from 'lucide-react';
+import { BellRing, Gauge, TicketPlus } from 'lucide-react';
+import { usePathname } from 'next/navigation'
+import Link from 'next/link';
 
 export default function Navigation() {
+    const pathname = usePathname()
     const [isOpen, setIsOpen] = useState(true);
     return (
         <>
@@ -125,16 +128,30 @@ export default function Navigation() {
                 <div className={`sidebar-left ${(isOpen) ? 'open' : ''}`}>
                     <div className="ps" >
                         <ul className="navigation-left" >
+                            <Link href={'/sysadmin/dashboard'}>
+                                <li
+                                    aria-current="page"
+                                    className={`router-link-active router-link-exact-active nav-item ${pathname == '/sysadmin/dashboard' ? 'active' : ''}`}
+                                    
+                                >
+                                    <div className={`nav-item-hold`} >
+                                        <Gauge size={48} color="red"/>
+                                        <p className="font-medium">Dashboard</p>
+                                    </div>
+                                </li>
+                            </Link>
+                            <Link href={'/sysadmin/request'}>
                             <li
                                 aria-current="page"
-                                className="router-link-active router-link-exact-active nav-item"
+                                className={`router-link-active router-link-exact-active nav-item ${(pathname == '/sysadmin/request') ? 'active' : ''}`}
                                 
                             >
                                 <div className={`nav-item-hold`} >
-                                    <Gauge size={48} color="red"/>
-                                    <p className="font-medium">Dashboard</p>
+                                    <TicketPlus size={48} color="red"/>
+                                    <p className="font-medium">Request</p>
                                 </div>
                             </li>
+                            </Link>
                         </ul>
                         
                     </div>
