@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 type Props = {}
@@ -38,11 +39,11 @@ const SignInPage = (props: Props) => {
                             />
                         </div>
                         <div className="mb-4">
-                            <a href="/sysadmin/dashboard">
+                            <Link href="/sysadmin/dashboard">
                                 <button className="bg-red-500 hover:bg-red-500/80 mb-2 text-white p-2 w-full">
                                     Sign In
                                 </button>
-                            </a>
+                            </Link>
                         </div>
                         <div className="text-right">
                             <a className="text-xs hover:text-red-500 underline text-gray-600" href="#">

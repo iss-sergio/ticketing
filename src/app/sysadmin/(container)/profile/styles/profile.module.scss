@@ -1,0 +1,15 @@
+.userProfile {
+    .headerCover {
+        background-color: tomato;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 140px;
+        border-radius: 10px 10px 0 0;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        background: rgba(0,0,0,.1)
+    }
+}

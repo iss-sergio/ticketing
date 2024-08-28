@@ -1,136 +1,227 @@
 import React from 'react'
-import Card from '@/components/card'
-import { Plus } from 'lucide-react'
 import CardHeaderAction from './components/card-header-action'
+import { Eye, Trash2 } from 'lucide-react'
 
 type Props = {}
 
 export default function RequestContainer({}: Props) {
   return (
-    <div className="grid grid-cols-12 gap-5">
-        <div className="col-span-12 mb-24">
-            <Card noPadding={false}>
-                <CardHeaderAction icon={<Plus />} title="New Request" />
-                <div className="card-body">
-                    <div className="block w-full overflow-x-auto whitespace-nowrap borderless hover">
-                        <div className="dataTable-wrapper dataTable-loading no-footer fixed-columns">
-                            <div className="dataTable-container block w-full overflow-x-auto whitespace-nowrap borderless hover">
-                                <table className="table-3 dataTable-table max-w-full w-full">
-                                <thead>
-                                    <tr className="">
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        ID
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Request No.
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Service
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Status
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Company
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Requested By
-                                    </th>
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Date Requested
-                                    </th>
-                                    
-                                    <th className="text-left border-b pb-3 mb-3 text-gray-500 font-semibold">
-                                        Action
-                                    </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="hover:bg-gray-100 cursor-pointer border-b border-1-solid border-gray-200">
-                                        <td className="text-sm py-3 px-4">1</td>
-                                        <td className="text-sm"> --- / ---</td>
-                                        <td className="py-3 text-sm">
-                                            Work
-                                        </td>
-                                        <td className="py-3"><span className="px-3 py-1 rounded-full text-primary border border-primary mr-3 text-sm">Done</span></td>
-                                        <td className="py-3">
-                                            <span className="text-sm">Company 1</span>
-                                        </td>
-                                        <td className="py-3 text-sm">User 1 </td>
-                                        <td className="py-3"><span className="text-sm">MM-DD-YYYY</span></td>
-                                        <td className="py-3">
-                                            <button type="button" className="btn rounded font-normal leading-4 ripple inline-block py-2 px-5 border border-primary text-primary hover:bg-primary hover:text-white mb-3 mr-3">View</button>
-                                        </td>
-                                    </tr>
-                                    <tr className="hover:bg-gray-100 cursor-pointer border-b border-1-solid border-gray-200">
-                                        <td className="text-sm py-3 px-4">2</td>
-                                        <td className="text-sm"> --- / ---</td>
-                                        <td className="py-3 text-sm">
-                                            Permit
-                                        </td>
-                                        <td className="py-3"><span className="px-3 py-1 rounded-full text-primary border border-primary mr-3 text-sm">Pending</span></td>
-                                        <td className="py-3">
-                                            <span className="text-sm">Company 2</span>
-                                        </td>
-                                        <td className="py-3 text-sm">User 2 </td>
-                                        <td className="py-3"><span className="text-sm">MM-DD-YYYY</span></td>
-                                        <td className="py-3">
-                                            <button type="button" className="btn rounded font-normal leading-4 ripple inline-block py-2 px-5 border border-primary text-primary hover:bg-primary hover:text-white mb-3 mr-3">View</button>
-                                        </td>
-                                    </tr>
-                                    <tr className="hover:bg-gray-100 cursor-pointer border-b border-1-solid border-gray-200">
-                                        <td className="text-sm py-3 px-4">2</td>
-                                        <td className="text-sm"> --- / ---</td>
-                                        <td className="py-3 text-sm">
-                                            Manpower
-                                        </td>
-                                        <td className="py-3"><span className="px-3 py-1 rounded-full text-primary border border-primary mr-3 text-sm">New</span></td>
-                                        <td className="py-3">
-                                            <span className="text-sm">Company 3</span>
-                                        </td>
-                                        <td className="py-3 text-sm">User 3 </td>
-                                        <td className="py-3"><span className="text-sm">MM-DD-YYYY</span></td>
-                                        <td className="py-3">
-                                            <button type="button" className="btn rounded font-normal leading-4 ripple inline-block py-2 px-5 border border-primary text-primary hover:bg-primary hover:text-white mb-3 mr-3">View</button>
-                                        </td>
-                                    </tr>
-                                    
-                                </tbody>
-                                </table>
+    <>
+        <div className="card flex flex-col bg-white dark:bg-foreground dark:text-white overflow-hidden mb-24">
+            <div className="card-header bg-gradient-to-r from-red-700 to-red-500 text-white">
+                <div className="py-4">
+                        <div className="flex justify-between flex-wrap items-center">
+                            <div>
+                                <p className="font-semibold text-lg text-white dark:text-white">
+                                    Requests
+                                </p>
                             </div>
-                            <div className="dataTable-bottom flex justify-between border-gray-2001 pt-4">
-                                <div className="dataTable-info mt-3 text-gray-500 text-sm"> Showing 1 to 8 of 8 entries </div>
-                                <nav className="dataTable-pagination">
-                                    <ul className="inline-flex -space-x-px text-sm">
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-e-0 border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" aria-current="page" className="flex items-center justify-center px-3 h-8 text-dark-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                                        </li>
-                                        <li>
-                                        <a href="#" className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                                        </li>
-                                    </ul>
-                                </nav>
+                            <div className=" text-gray-600">
+                                <input
+                                    className="bg-gray-100 dark:bg-foreground dark:text-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
+                                    type="search"
+                                    name="search"
+                                    placeholder="Search Request "
+                                />
+                                <button
+                                    role="button"
+                                    className="absolute right-0 top-0 mt-2 mr-4 focus:outline-none"
+                                    type="submit"
+                                />
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div className="p-5">
+                <div className="grid grid-cols-12 gap-5">
+                <div className="col-span-12 xl:col-span-3 lg:col-span-4">
+                    <div className="card flex flex-col bg-white dark:bg-foreground dark:text-white">
+                        <div  className="card-body">
+                            <div className="divide-y divide-gray-200 dark:divide-dark divide-solid">
+                                <div className="flex items-center justify-between py-3 px-1">
+                                    <span>All</span>
+                                    <div className="bg-gray-100 dark:bg-gray-300 rounded-full flex items-center justify-center text-red-600 font-medium h-8 w-8 mr-2">
+                                        8
+                                    </div>
+                                </div>
+                                <div className="py-3 px-1">New</div>
+                                <div className="py-3 px-1">Pending</div>
+                                <div className="py-3 px-1">Done</div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Card>
+                <div className="col-span-12 xl:col-span-9 lg:col-span-8">
+                    <div
+                    
+                    className="card flex flex-col bg-white dark:bg-foreground dark:text-white"
+                    >
+                    <div  className="card-body">
+                        <div className="block w-full overflow-x-auto whitespace-nowrap borderless hover">
+                        <div className="dataTable-wrapper dataTable-loading no-footer fixed-columns">
+                            <div className="dataTable-container block w-full overflow-x-auto whitespace-nowrap borderless hover">
+                            <table className="table-3 dataTable-table max-w-full w-full">
+                                <thead>
+                                <tr className="">
+                                    <th className="text-left border-b dark:border-dark dark:text-gray-300 pb-3 mb-3 text-gray-500 font-semibold">
+                                        Request No.
+                                    </th>
+                                    <th className="text-left border-b dark:border-dark dark:text-gray-300 pb-3 mb-3 text-gray-500 font-semibold">
+                                    
+                                        Type
+                                    </th>
+                                    <th className="text-left border-b dark:border-dark dark:text-gray-300 pb-3 mb-3 text-gray-500 font-semibold">
+                                    
+                                        Requested By
+                                    </th>
+                                    <th className="text-left border-b dark:border-dark dark:text-gray-300 pb-3 mb-3 text-gray-500 font-semibold">
+                                    
+                                        Date
+                                    </th>
+                                    <th className="text-left border-b dark:border-dark dark:text-gray-300 pb-3 mb-3 text-gray-500 font-semibold">
+                                    
+                                        Action
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {(() => {
+                                        const rows = [];
+                                        for (let i = 0; i < 5; i++) {
+                                        rows.push(
+                                            <tr key={i} className="border-b border-gray-200 dark:border-dark hover:bg-gray-100 cursor-pointer dark:hover:bg-dark">
+                                            <td className="text-xs py-3 px-4">
+                                                <p className="text-base"> ---/--- </p>
+                                            </td>
+                                            <td> Request Type </td>
+                                            <td className="py-3"> User {i+1} </td>
+                                            <td className="py-3"> MM-DD-YYYY </td>
+                                            <td className="py-3">
+                                                <div className="flex">
+                                                    <CardHeaderAction action="edit" icon={<Eye size={16} color="red" />} status={i == 2 ? true : false} />
+                                                    <CardHeaderAction action="delete" icon={<Trash2 size={16} color="red" />} />
+                                                </div>
+                                            </td>
+                                            </tr>
+                                        );
+                                        }
+                                        return rows;
+                                    })()}
+                                </tbody>
+                            </table>
+                            </div>
+                            <div className="dataTable-bottom mt-6 float-end">
+                                <nav className="dataTable-pagination">
+                                    <div className="px-4 py-3 flex items-center justify-between sm:px-6">
+                                    <div className="sm:flex-1 sm:flex sm:items-center sm:justify-center">
+                                        <div>
+                                        <nav
+                                            className="relative dark:bg-dark z-0 inline-flex rounded-md shadow-sm -space-x-px"
+                                            aria-label="Pagination"
+                                        >
+                                            <a
+                                            href="#"
+                                            className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 text-sm font-medium text-gray-500 hover:bg-gray-50 dark:border-foreground dark:hover:bg-foreground"
+                                            >
+                                            <span className="sr-only">Previous</span>
+                                            <svg
+                                                className="h-5 w-5"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                fillRule="evenodd"
+                                                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                                                clipRule="evenodd"
+                                                />
+                                            </svg>
+                                            </a>
+                                            <a
+                                            href="#"
+                                            aria-current="page"
+                                            className="dark:border-foreground dark:hover:bg-foreground z-10 bg-primary border-gray-500 text-white relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            1
+                                            </a>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            2
+                                            </a>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            3
+                                            </a>
+                                            <span className="dark:border-foreground dark:hover:bg-foreground relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium text-gray-700">
+                                            
+                                            ...
+                                            </span>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground border-gray-300 text-gray-500 hover:bg-gray-50 hidden md:inline-flex relative items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            8
+                                            </a>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            9
+                                            </a>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground border-gray-300 text-gray-500 hover:bg-gray-50 relative inline-flex items-center px-4 py-2 border text-sm font-medium"
+                                            >
+                                            
+                                            10
+                                            </a>
+                                            <a
+                                            href="#"
+                                            className="dark:border-foreground dark:hover:bg-foreground relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 text-sm font-medium text-gray-500 hover:bg-gray-50"
+                                            >
+                                            <span className="sr-only">Next</span>
+                                            <svg
+                                                className="h-5 w-5"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                viewBox="0 0 20 20"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                            >
+                                                <path
+                                                fillRule="evenodd"
+                                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                                clipRule="evenodd"
+                                                />
+                                            </svg>
+                                            </a>
+                                        </nav>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div  className="card-body noPadding" />
         </div>
-    </div>
+
+
+    </>
+    
   )
 }
