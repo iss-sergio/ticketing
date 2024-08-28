@@ -1,14 +1,16 @@
 import BreadCrumb from '@/components/breadcrumb'
 import Navigation from '@/components/navigation'
-import Footer from '@/components/footer'
 import './styles/main.css'
 
+type LayoutProps = {
+    children: React.ReactNode;
+    footer: React.ReactNode;
+};
 
 export default function Layout({
     children,
-  }: {
-    children: React.ReactNode
-  }) {
+    footer
+  }: LayoutProps) {
     return (
         <div className="app-admin-wrap-layout-2">
             <Navigation role="admin" />
@@ -19,7 +21,7 @@ export default function Layout({
                             <BreadCrumb />
                             {children}
                         </div>
-                        <Footer />
+                        {footer}
                     </div>
                 </main>
             </div>
