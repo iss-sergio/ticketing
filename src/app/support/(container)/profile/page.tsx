@@ -14,7 +14,7 @@ export default function ProfileContainer({}: Props) {
                     <div className="text-center">
                         <Image
                             className="relative z-1 w-20 h-20 m-auto mt-10 rounded-full border-2 border-white"
-                            src="/assets/illustrations/user.png"
+                            src="https://accionaweb.isstest.tech/assets/illustrations/user.png"
                             alt="User Avatar"
                             width={120}
                             height={120}

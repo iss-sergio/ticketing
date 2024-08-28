@@ -40,7 +40,7 @@ export default function Navigation({role}:Props) {
             <div className={`header-wrapper flex bg-white justify-between px-4`}>
             <div className="flex items-center">
                 <div className="logo flex justify-center">
-                    <Image src="/assets/acciona-logo.png" alt="logo" width={100} height={100} />
+                    <img src="https://accionaweb.isstest.tech/assets/acciona-logo.png" alt="logo" width={100} height={100} />
                 </div>
                 <div className="mx-4 sm:mx-3" >
                     <button
@@ -169,9 +169,9 @@ export default function Navigation({role}:Props) {
                         font-medium
                         "
                     >
-                        <Image
+                        <img
                         className="avatar rounded-full"
-                        src="/assets/illustrations/user.png"
+                        src="https://accionaweb.isstest.tech/assets/illustrations/user.png"
                         alt="User Avatar"
                         width={40}
                         height={40}

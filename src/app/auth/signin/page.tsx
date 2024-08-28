@@ -12,7 +12,7 @@ const SignInPage = (props: Props) => {
                 <div className="col-span-12 lg:col-span-6 bg-white">
                     <div className="p-5">
                         <div className="flex justify-center items-center p-6">
-                            <Image src="/assets/acciona-logo.png" alt="logo" width={100} height={100} />
+                            <img src="https://accionaweb.isstest.tech/assets/acciona-logo.png" alt="logo" width={100} height={100} />
                         </div>
                         <h1 className="mb-3 text-lg">Sign In </h1>
                         <form action="">
